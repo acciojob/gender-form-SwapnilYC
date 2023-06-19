@@ -13,9 +13,9 @@ const App = () => {
     <div>
       <h1>Select your gender:</h1>
       <input onClick={() => genderHandler("Male")} type="radio" id="male" name="male" value="Male" />
-      <label for="male">Male</label>
+      <h2 for="male">Male</h2>
       <input onClick={() => genderHandler("Female")} type="radio" id="female" name="female" value="Female" />
-      <label for="female">Female</label>
+      <h2 for="female">Female</h2>
       {/* Do not remove the main div */}
       <label for="shirts">Select your shirt size:</label>
       {
