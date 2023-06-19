@@ -4,7 +4,6 @@ import './../styles/App.css';
 
 export default function App() {
   let [gender, setGender] = useState("Male");
-
   return (
     <div>
       <h1>Select your gender:</h1>
