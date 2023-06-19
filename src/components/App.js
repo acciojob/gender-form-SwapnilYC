@@ -5,36 +5,32 @@ import './../styles/App.css';
 export default function App() {
   let [gender, setGender] = useState("Male");
 
-  function genderHandler(gen) {
-    setGender(gen);
-  }
-
   return (
     <div>
       <h1>Select your gender:</h1>
       <input
-        onClick={() => genderHandler("Male")}
+        onClick={(e) => setGender(e.target.value)}
         type="radio"
         id="male"
         name="gender"
-        value="Male"
+        value="male"
       />
-      <h2 for="male">Male</h2>
+      <label for="male">Male</label>
       <input
-        onClick={() => genderHandler("Female")}
+         onClick={(e) => setGender(e.target.value)}
         type="radio"
         id="female"
         name="gender"
-        value="Female"
+        value="female"
       />
-      <h2 for="female">Female</h2>
+      <label for="female">Female</label>
       {/* Do not remove the main div */}
 
-      {gender === "Male" ? (
+      {gender === "male" ? (
         <>
-          <label for="shirts">Select your shirt size:</label>
+          <h2 for="shirts">Select your shirt size:</h2>
           <select name="shirtForMale" id="shirts">
-            <option value="select_size">Select size</option>
+            <option value="select_size" disabled>Select size</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
@@ -42,9 +38,9 @@ export default function App() {
         </>
       ) : (
         <>
-          <label for="dress">Select your dress size:</label>
+          <h2 for="dress">Select your dress size:</h2>
           <select name="shirtForFemale" id="dress">
-            <option value="select_size">Select size</option>
+            <option value="select_size" disabled>Select size</option>
             <option value="2">2</option>
             <option value="4">4</option>
             <option value="6">6</option>
