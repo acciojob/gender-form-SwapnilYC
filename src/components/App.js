@@ -17,7 +17,7 @@ export default function App() {
         type="radio"
         id="male"
         name="gender"
-        value="Male"
+        value="Select your shirt size:"
       />
       <h2 for="male">Male</h2>
       <input
@@ -25,7 +25,7 @@ export default function App() {
         type="radio"
         id="female"
         name="gender"
-        value="Female"
+        value="Select your dress size:"
       />
       <h2 for="female">Female</h2>
       {/* Do not remove the main div */}
