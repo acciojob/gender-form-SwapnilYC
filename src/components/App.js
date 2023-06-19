@@ -16,7 +16,7 @@ export default function App() {
       />
       <label for="male">Male</label>
       <input
-         onClick={(e) => setGender(e.target.value)}
+        onClick={(e) => setGender(e.target.value)}
         type="radio"
         id="female"
         name="gender"
@@ -28,8 +28,10 @@ export default function App() {
       {gender === "male" ? (
         <>
           <h2 for="shirts">Select your shirt size:</h2>
-          <select name="shirtForMale" id="shirts">
-            <option value="select_size" disabled>Select size</option>
+          <select name="size" id="size">
+            <option value="Select size" disabled>
+              Select size
+            </option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
@@ -38,17 +40,20 @@ export default function App() {
       ) : (
         <>
           <h2 for="dress">Select your dress size:</h2>
-          <select name="shirtForFemale" id="dress">
-            <option value="select_size" disabled>Select size</option>
-            <option value="2">2</option>
-            <option value="4">4</option>
-            <option value="6">6</option>
+          <select name="size" id="size">
+            <option value="Select size" disabled>
+              Select size
+            </option>
+            <option value="two">2</option>
+            <option value="four">4</option>
+            <option value="six">6</option>
           </select>
         </>
       )}
     </div>
   );
 }
+
 
 // const App = () => {
 //   return (
