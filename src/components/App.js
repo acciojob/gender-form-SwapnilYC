@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import './../styles/App.css';
 
 export default function App() {
-  let [gender, setGender] = useState("");
+  let [gender, setGender] = useState("Male");
 
   function genderHandler(gen) {
     setGender(gen);
