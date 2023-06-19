@@ -1,5 +1,5 @@
 
-import React,{useState} from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
@@ -17,26 +17,42 @@ const App = () => {
       <input onClick={() => genderHandler("Female")} type="radio" id="female" name="female" value="Female" />
       <h2 for="female">Female</h2>
       {/* Do not remove the main div */}
-      <label for="shirts">Select your shirt size:</label>
+
       {
         gender === "Male" ? (
-          <select name="shirtForMale" id="shirts">
-            <option value="select_size">Select size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
+          <>
+            <label for="shirts">Select your shirt size:</label>
+            <select name="shirtForMale" id="shirts">
+              <option value="select_size">Select size</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </>
+
         ) : (
-          <select name="shirtForFemale" id="shirts">
-            <option value="select_size">Select size</option>
-            <option value="2">2</option>
-            <option value="4">4</option>
-            <option value="6">6</option>
-          </select>
+          <>
+            <label for="dress">Select your dress size:</label>
+            <select name="shirtForFemale" id="dress">
+              <option value="select_size">Select size</option>
+              <option value="2">2</option>
+              <option value="4">4</option>
+              <option value="6">6</option>
+            </select>
+          </>
+
         )
       }
     </div>
   )
 }
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>Hello</h1>
+//     </div>
+//   );
+// }
 
 export default App
